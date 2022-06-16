@@ -55,6 +55,7 @@ const commonTheme = {
     success: "#1EB012",
     yellowish: "#FFCC80",
     darkblue: "#3C4852",
+    bordergrey: "#E7E7E7",
     primary: {
       DEFAULT: "#FFCA0F",
       light: "#FDD835",

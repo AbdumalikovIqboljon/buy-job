@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+  // import ReusableButton from './ReusableButton.vue';
+  import BaseButton from "./BaseButton.vue";
+</script>
 
 <template>
-  <div class="grid grid-cols-2 grid-rows-2 items-center">
-    <p class="flex">
+  <div class="grid grid-cols-2 grid-rows-2 items-center gap-2">
+    <p class="flex justify-around items-center">
       <svg
         width="24"
         height="24"
@@ -25,5 +28,8 @@
       class="px-4 py-1 font-bold bg-yellowish rounded-lg"
       text="xl darkblue"
     >1234 ₽</p>
+
+    <BaseButton type="info" class="text-white" secondary size="extra-small">Пополнить</BaseButton>
+    <BaseButton type="info" class="text-white" secondary size="extra-small">Вывести</BaseButton>
   </div>
 </template>
