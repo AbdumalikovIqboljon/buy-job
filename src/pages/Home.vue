@@ -3,6 +3,8 @@
 </script>
 
 <template>
-    <TheHeader/>
+    <header class="bg-slate-700">
+        <TheHeader/>
+    </header>
     <h2>hello</h2>
 </template>
