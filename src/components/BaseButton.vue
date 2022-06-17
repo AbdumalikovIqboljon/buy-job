@@ -106,7 +106,7 @@ export default {
             'bg-transparent text-white border border-bordergrey border-opacity-40': type === 'info',
             'bg-white text-secondary border border-secondary':
               type === 'primary',
-            'bg-white text-primary border border-primary': type === 'warning',
+            'bg-transparent text-darkblue border border-yellowish': type === 'warning',
             'bg-white text-error border border-error': type === 'error',
           }
         : {
