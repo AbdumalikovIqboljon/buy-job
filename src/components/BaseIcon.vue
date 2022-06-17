@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
   props: {
     name: {
@@ -7,10 +7,8 @@ export default {
     },
   },
 };
-
 </script>
 
 <template>
-  <div v-html="import(`../icons/${name}.svg?raw`)" />
-
-</template>
+  <div v-html="require(`../icons/${name}.svg?raw`)" />
+</template> -->

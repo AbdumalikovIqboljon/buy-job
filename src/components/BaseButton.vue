@@ -92,7 +92,7 @@ export default {
     :to="to"
     :href="href"
     :type="htmlType"
-    class="inline-flex items-center font-sans justify-center rounded overflow-hidden relative disabled:(bg-gray-400 cursor-not-allowed)"
+    class="inline-flex items-center font-sans justify-center rounded-lg overflow-hidden relative disabled:(bg-gray-400 cursor-not-allowed)"
     :class="[
       {
         'button-tiny': size === 'tiny',
@@ -110,9 +110,9 @@ export default {
             'bg-white text-error border border-error': type === 'error',
           }
         : {
-            'bg-sky-700 text-white border-sky-700': type === 'info',
+            'bg-transparent text-white border-sky-700': type === 'info',
             'bg-secondary text-white border-secondary': type === 'primary',
-            'bg-primary text-white ': type === 'warning',
+            'bg-yellowish text-darkblue': type === 'warning',
             'bg-error text-white border-primary': type === 'error',
             'bg-light-500 text-secondary border-error': type === 'tertiary',
           },

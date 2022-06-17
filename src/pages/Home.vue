@@ -1,10 +1,14 @@
 <script setup>
-    import TheHeader from '../components/TheHeader.vue';
+import TheHeader from "../components/TheHeader.vue";
+import TheFooter from "../components/TheFooter.vue";
 </script>
 
 <template>
-    <header class="bg-slate-700">
-        <TheHeader/>
-    </header>
-    <h2>hello</h2>
+  <header class="bg-darkblue">
+    <TheHeader />
+  </header>
+  <h2>hello</h2>
+  <footer class="bg-darkblue">
+    <TheFooter />
+  </footer>
 </template>

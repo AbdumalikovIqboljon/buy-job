@@ -1,6 +1,5 @@
 <script setup>
-  // import ReusableButton from './ReusableButton.vue';
-  import BaseButton from "./BaseButton.vue";
+import BaseButton from "./BaseButton.vue";
 </script>
 
 <template>
@@ -22,14 +21,14 @@
           fill="#FFCC80"
         />
       </svg>
-      <span class="">Баланс:</span>
+      <span class="text-white">Баланс:</span>
     </p>
     <p 
       class="px-4 py-1 font-bold bg-yellowish rounded-lg"
       text="xl darkblue"
     >1234 ₽</p>
 
-    <BaseButton type="info" class="text-white" secondary size="extra-small">Пополнить</BaseButton>
-    <BaseButton type="info" class="text-white" secondary size="extra-small">Вывести</BaseButton>
+    <BaseButton type="info" secondary size="extra-small">Пополнить</BaseButton>
+    <BaseButton type="info" secondary size="extra-small">Вывести</BaseButton>
   </div>
 </template>
