@@ -1,5 +1,5 @@
 <script setup>
-import UserProfileImage from "@/assets/Pngs/profile-image.png";
+import UserProfileImage from "@/assets/images/profile-image.png";
 import BaseButton from "./BaseButton.vue";
 </script>
 <template>

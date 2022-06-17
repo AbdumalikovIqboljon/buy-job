@@ -1,14 +1,13 @@
 <script setup>
-import TheHomeHeader from "../components/TheHomeHeader.vue";
+import TheHeader from "../components/TheHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 </script>
 
 <template>
-  <header>
-    <TheHomeHeader />
+  <header class="bg-darkblue">
+    <TheHeader />
   </header>
-  <div class="container mx-auto">
-  </div>
+  <h2>hello</h2>
   <footer class="bg-darkblue">
     <TheFooter />
   </footer>
