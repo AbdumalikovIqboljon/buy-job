@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../src/assets/Fonts/Rubik-Regular.woff2") format("woff2"),
+         url("../src/assets/Fonts/Rubik-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../src/assets/Fonts/Rubik-Medium.woff2") format("woff2"),
+         url("../src/assets/Fonts/Rubik-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../src/assets/Fonts/Rubik-Bold.woff2") format("woff2"),
+         url("../src/assets/Fonts/Rubik-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../src/assets/Fonts/Rubik-SemiBold.woff2") format("woff2"),
+         url("../src/assets/Fonts/Rubik-SemiBold.woff") format("woff");
+}
+body {
+    font-family: "Rubik", "Arial", sans-serif;
+}
