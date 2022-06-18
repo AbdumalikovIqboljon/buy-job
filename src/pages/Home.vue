@@ -1,12 +1,21 @@
 <script setup>
+import { reactive } from "vue";
 import TheHomeHeader from "../components/TheHomeHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import BaseButton from "../components/BaseButton.vue";
-import { reactive } from "vue";
 import ServicesItem from "../components/ServicesItem.vue";
+import WorkingLevel from "../components/WorkingLevel.vue";
+
 import ToDoIcon from "../icons/todo-list-icon.svg";
 import CalendarIcon from "../icons/calendar-icon.svg";
 import CertificateIcon from "../icons/money-pocket-icon.svg";
+
+import WorkingLevelFirstImg from "../assets/images/work-steps--first.png";
+import WorkingLevelSecondImg from "../assets/images/work-steps--second.png";
+import WorkingLevelThirdImg from "../assets/images/work-steps--third.png";
+import WorkingLevelFourthImg from "../assets/images/work-steps--fourth.png";
+import WorkingLevelFifthImg from "../assets/images/work-steps--fifth.png";
+import WorkingLevelSixthImg from "../assets/images/work-steps--sixth.png";
 
 const services = reactive([
   {
@@ -34,6 +43,47 @@ const services = reactive([
     title: "Цену вы выбираете сами",
     imageWidth: "90", 
     imageHeight: "124",
+  },
+]);
+
+const workingLevels = reactive([
+  {
+    id: 1,
+    serviceImage: WorkingLevelFirstImg,
+    imageDescription: "Adult smiles, took a phone",
+    title: "Размещаете заказ",
+
+  },
+  {
+    id: 2,
+    serviceImage: WorkingLevelFourthImg,
+    imageDescription: "Young woman is working with laptop",
+    title: "Мы подбираем исполнителей",
+
+  },
+  {
+    id: 3,
+    serviceImage: WorkingLevelThirdImg,
+    imageDescription: "Man is thinking about somnething,he's so curious",
+    title: "Вы сами выбираете наиболее подходящего исполнителя",
+  },
+  {
+    id: 4,
+    serviceImage: WorkingLevelSecondImg,
+    imageDescription: "Woman seems so surprised from something, she's smiling",
+    title: "Договариваетесь с испольтелем о цене и сроках",
+  },
+  {
+    id: 5,
+    serviceImage: WorkingLevelFifthImg,
+    imageDescription: "Black haired girl took phone and is looking for last payment",
+    title: "Оплачиваете заказ",
+  },
+  {
+    id: 6,
+    serviceImage: WorkingLevelSixthImg,
+    imageDescription: "Blonde woman with eye-glasses",
+    title: "Получаете работу",
   },
 ]);
 </script>
@@ -68,7 +118,7 @@ const services = reactive([
     </section>
 
     <!-- Services -->
-    <section>
+    <section class="mb-32">
       <div class="text-center mb-15">
         <h2 class="text-5xl text-darkblue font-medium">Преимущества сервиса</h2>
       </div>
@@ -80,7 +130,29 @@ const services = reactive([
         />
       </ul>
     </section>
+
+    <!-- Working Levels -->
+    <section class="pb-32">
+      <div class="text-center mb-15">
+        <h2 class="text-5xl text-darkblue font-medium">Этапы работы</h2>
+      </div>
+      <ul class="grid grid-cols-3 grid-rows-1 gap-y-10 gap-x-10 items-center justify-center list-none">
+        <WorkingLevel
+          v-for="level in workingLevels"
+          :data="level"
+          :key="level.id"
+        />
+      </ul>
+    </section>
+
+
+    <!-- Economy -->
+    <section>
+    
+    </section>
   </main>
+
+
 
   <!-- Reusable Footer -->
   <footer>
