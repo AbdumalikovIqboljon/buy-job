@@ -5,6 +5,7 @@ import TheFooter from "../components/TheFooter.vue";
 import BaseButton from "../components/BaseButton.vue";
 import ServicesItem from "../components/ServicesItem.vue";
 import WorkingLevel from "../components/WorkingLevel.vue";
+import Guarantee from "../components/Guarantee.vue";
 
 import ToDoIcon from "../icons/todo-list-icon.svg";
 import CalendarIcon from "../icons/calendar-icon.svg";
@@ -17,6 +18,8 @@ import WorkingLevelFourthImg from "../assets/images/work-steps--fourth.png";
 import WorkingLevelFifthImg from "../assets/images/work-steps--fifth.png";
 import WorkingLevelSixthImg from "../assets/images/work-steps--sixth.png";
 
+import ShieldIcon from "../icons/warranty-icon.svg";
+import MoneyPocketIcon from "../icons/money-pocket-icon.svg";
 const services = reactive([
   {
     id: 1,
@@ -25,7 +28,6 @@ const services = reactive([
     title: "Выполнение работы гарантируется",
     imageWidth: "123",
     imageHeight: "127",
-
   },
   {
     id: 2,
@@ -34,14 +36,13 @@ const services = reactive([
     title: "Сроки вы определяете сами",
     imageWidth: "96",
     imageHeight: "97",
-
   },
   {
     id: 3,
     serviceImage: CertificateIcon,
     imageDescription: "Certificate icon",
     title: "Цену вы выбираете сами",
-    imageWidth: "90", 
+    imageWidth: "90",
     imageHeight: "124",
   },
 ]);
@@ -52,14 +53,12 @@ const workingLevels = reactive([
     serviceImage: WorkingLevelFirstImg,
     imageDescription: "Adult smiles, took a phone",
     title: "Размещаете заказ",
-
   },
   {
     id: 2,
     serviceImage: WorkingLevelFourthImg,
     imageDescription: "Young woman is working with laptop",
     title: "Мы подбираем исполнителей",
-
   },
   {
     id: 3,
@@ -76,7 +75,8 @@ const workingLevels = reactive([
   {
     id: 5,
     serviceImage: WorkingLevelFifthImg,
-    imageDescription: "Black haired girl took phone and is looking for last payment",
+    imageDescription:
+      "Black haired girl took phone and is looking for last payment",
     title: "Оплачиваете заказ",
   },
   {
@@ -86,6 +86,23 @@ const workingLevels = reactive([
     title: "Получаете работу",
   },
 ]);
+
+const guaranteeDeals = reactive([
+  {
+    id: 1,
+    title: "Гарантия возврата",
+    image: ShieldIcon,
+    description: "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
+
+  },
+  {
+    id: 2,
+    title: "Безопасная сделка",
+    image: MoneyPocketIcon,
+    description: "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
+
+  }
+])
 </script>
 
 <template>
@@ -95,9 +112,9 @@ const workingLevels = reactive([
   </header>
 
   <!-- Main -->
-  <main class="container mx-auto">
+  <main>
     <!-- Site Hero -->
-    <section class="pt-50 pb-90">
+    <section class="container mx-auto pt-50 pb-90">
       <h1 class="text-8xl text-darkblue font-bold mb-6">Купи работу</h1>
       <p class="text-3xl font-normal text-darkblue mb-14">
         экономим твои деньги и время
@@ -118,7 +135,7 @@ const workingLevels = reactive([
     </section>
 
     <!-- Services -->
-    <section class="mb-32">
+    <section class="container mx-auto mb-32">
       <div class="text-center mb-15">
         <h2 class="text-5xl text-darkblue font-medium">Преимущества сервиса</h2>
       </div>
@@ -132,11 +149,13 @@ const workingLevels = reactive([
     </section>
 
     <!-- Working Levels -->
-    <section class="pb-32">
+    <section class="container mx-auto pb-32">
       <div class="text-center mb-15">
         <h2 class="text-5xl text-darkblue font-medium">Этапы работы</h2>
       </div>
-      <ul class="grid grid-cols-3 grid-rows-1 gap-y-10 gap-x-10 items-center justify-center list-none">
+      <ul
+        class="grid grid-cols-3 grid-rows-1 gap-y-10 gap-x-10 items-center justify-center list-none"
+      >
         <WorkingLevel
           v-for="level in workingLevels"
           :data="level"
@@ -145,14 +164,43 @@ const workingLevels = reactive([
       </ul>
     </section>
 
-
     <!-- Economy -->
-    <section>
-    
+    <section class="economy">
+      <div class="container flex flex-row-reverse">
+        <article class="max-w-164.5 w-full">
+          <h2 class="text-5xl mb-14 text-darkblue !items-start font-medium">
+            Экономим ваше время
+          </h2>
+          <p class="text-darkblue text-lg mb-4.5">
+            Maecenas vestibulum libero turpis, eu efficitur eros vehicula a.
+            Duis fermentum fermentum tortor semper vulputate. Sed arcu est,
+            tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla
+            urna iaculis laoreet. Vestibulum interdum porttitor ligula eget
+            pulvinar. Nullam porttitor rutrum magna vitae vulputate. Sed
+            facilisis quis leo eget sollicitudin. Aliquam id tincidunt risus.
+            Nullam quis sem non sapien pharetra sodales.
+          </p>
+          <p class="text-darkblue text-lg">
+            Maecenas vestibulum libero turpis, eu efficitur eros vehicula a.
+            Duis fermentum fermentum tortor semper vulputate. Sed arcu est,
+            tincidunt vel mi id, tristique mattis lectus.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="container pb-28">
+      <div class="text-center mb-15">
+        <h2 class="text-5xl text-darkblue font-medium">Гарантия возврата денег</h2>
+      </div>
+      <ul class="flex justify-around list-none">
+        <Guarantee
+          v-for="guarantee in guaranteeDeals"
+          :data="guarantee"
+          :key="guarantee.id"
+        />
+      </ul>
     </section>
   </main>
-
-
 
   <!-- Reusable Footer -->
   <footer>
@@ -173,5 +221,12 @@ h2 {
     border-radius: 10px;
     background-color: #ffcc80;
   }
+}
+.economy {
+  background-image: url("../assets/images/economy-section-bg.svg");
+  background-size: 2300px 976px;
+  background-position: calc(50%) calc(50%);
+  background-repeat: no-repeat;
+  padding: 300px 0;
 }
 </style>
