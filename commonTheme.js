@@ -56,6 +56,7 @@ const commonTheme = {
     yellowish: "#FFCC80",
     darkblue: "#3C4852",
     bordergrey: "#E7E7E7",
+    serviceColor: "#f8f8f8",
     primary: {
       DEFAULT: "#FFCA0F",
       light: "#FDD835",
