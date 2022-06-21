@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from "vue";
+import { reactive, onMounted, onUnmounted } from "vue";
 import TheHomeHeader from "../components/TheHomeHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import BaseButton from "../components/BaseButton.vue";
@@ -92,45 +92,66 @@ const guaranteeDeals = reactive([
     id: 1,
     title: "Гарантия возврата",
     image: ShieldIcon,
-    description: "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
-
+    description:
+      "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
   },
   {
     id: 2,
     title: "Безопасная сделка",
     image: MoneyPocketIcon,
-    description: "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
+    description:
+      "Maecenas vestibulum libero turpis, eu efficitur eros vehicula a. Duis fermentum fermentum tortor semper vulputate. Sed arcu est, tincidunt vel mi id, tristique mattis lectus. Ut rutrum fringilla urna iaculis laoreet. Vestibulum interdum porttitor ligula eget pulvinar.",
+  },
+]);
 
+function handleScroll(event) {
+  let header = document.querySelector("#dynamic");
+  if(window.scrollY > 50) {
+    console.log(window.scrollY);
+    header.classList.add("newClass");
+  } 
+
+  if(window.scrollY <= 50) {
+    header.classList.remove("newClass");
   }
-])
+}
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
 </script>
 
 <template>
   <!-- Reusable Header -->
-  <header>
+  <header class="fixed w-full" id="dynamic" @scroll="handleScroll">
     <TheHomeHeader />
   </header>
 
   <!-- Main -->
   <main>
     <!-- Site Hero -->
-    <section class="container mx-auto pt-50 pb-90">
-      <h1 class="text-8xl text-darkblue font-bold mb-6">Купи работу</h1>
-      <p class="text-3xl font-normal text-darkblue mb-14">
-        экономим твои деньги и время
-      </p>
-      <div class="max-w-140 w-full flex">
-        <BaseButton
-          class="text-sm font-semibold mr-6 uppercase py-8 px-10"
-          type="warning"
-          >Разместить заказ</BaseButton
-        >
-        <BaseButton
-          class="text-sm font-semibold uppercase py-8 px-10"
-          type="warning"
-          secondary
-          >Стать автором</BaseButton
-        >
+    <section class="site-hero">
+      <div class="container mx-auto pt-50 pb-90">
+        <h1 class="text-8xl text-darkblue font-bold mb-6">Купи работу</h1>
+        <p class="text-3xl font-normal text-darkblue mb-14">
+          экономим твои деньги и время
+        </p>
+        <div class="max-w-140 w-full flex">
+          <BaseButton
+            class="text-sm font-semibold mr-6 uppercase py-8 px-10"
+            type="warning"
+            >Разместить заказ</BaseButton
+          >
+          <BaseButton
+            class="text-sm font-semibold uppercase py-8 px-10"
+            type="warning"
+            secondary
+            >Стать автором</BaseButton
+          >
+        </div>
       </div>
     </section>
 
@@ -190,7 +211,9 @@ const guaranteeDeals = reactive([
     </section>
     <section class="container pb-28">
       <div class="text-center mb-15">
-        <h2 class="text-5xl text-darkblue font-medium">Гарантия возврата денег</h2>
+        <h2 class="text-5xl text-darkblue font-medium">
+          Гарантия возврата денег
+        </h2>
       </div>
       <ul class="flex justify-around list-none">
         <Guarantee
@@ -203,12 +226,29 @@ const guaranteeDeals = reactive([
   </main>
 
   <!-- Reusable Footer -->
-  <footer>
-    <TheFooter />
-  </footer>
+  <footer class="footer bg-darkblue">qwqw lorem20</footer>
 </template>
 
 <style lang="scss" scoped>
+.site-hero {
+  background-image: url("../assets/images/site-hero-woman-bg.png"),
+    url("../assets/images/site-hero-bg.svg");
+  background-size: 716px 657px, 1920px 1118px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% + 450px) calc(50% + 50px),
+    calc(50% - 70px) calc(50% - 100px);
+}
+#dynamic {
+  padding: 20px 0;
+  transition: background-color 0.2s linear,
+              box-shadow 0.2s linear;
+}
+.newClass {
+  border:none;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 2px 5px 0px #ccc;
+  z-index: 99;
+}
 h2 {
   display: flex;
   flex-direction: column;
@@ -228,5 +268,10 @@ h2 {
   background-position: calc(50%) calc(50%);
   background-repeat: no-repeat;
   padding: 300px 0;
+}
+.footer {
+  background-image: url("../assets/images/footer-bg.svg");
+  background-size: 2240px 340px;
+  background-repeat: no-repeat;
 }
 </style>

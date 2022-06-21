@@ -7,7 +7,7 @@ import InboxIcon from "./svgs/InboxIcon.vue";
 </script>
 
 <template>
-  <div class="container flex items-center justify-between mx-auto pb-3 pt-12">
+  <div class="container flex items-center justify-between mx-auto">
     <router-link :to="{ name: 'home' }">
       <SiteLogoDark />
     </router-link>
@@ -27,16 +27,3 @@ import InboxIcon from "./svgs/InboxIcon.vue";
   </div>
 
 </template>
-
-<style>
-body {
-    background-image: url("../assets/images/site-hero-woman-bg.png"),
-                      url("../assets/images/site-hero-bg.svg");
-    background-size: 716px 657px,
-                     1920px 1118px;
-    background-repeat: no-repeat,
-                       no-repeat;
-    background-position: calc(50% + 450px) calc(50% - 50px),
-                         calc(50% - 100px) calc(50% - 170px);
-}
-</style>
