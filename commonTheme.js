@@ -52,11 +52,13 @@ const commonTheme = {
   },
   colors: {
     error: "#FF1B1B",
-    success: "#1EB012",
+    success: "#66B87A",
+    requestColor: "#E1B26C",
     yellowish: "#FFCC80",
     darkblue: "#3C4852",
     bordergrey: "#E7E7E7",
     serviceColor: "#f8f8f8",
+    ticketColor: "#8E8D8D",
     primary: {
       DEFAULT: "#FFCA0F",
       light: "#FDD835",
