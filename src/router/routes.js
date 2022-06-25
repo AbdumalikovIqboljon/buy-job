@@ -1,5 +1,6 @@
 import Support from "../pages/Support.vue";
 import Home from "../pages/Home.vue";
+import Login from "../pages/Login.vue";
 // import Login from "../pages/Login.vue";
 export const routes = [
     {
@@ -11,5 +12,10 @@ export const routes = [
         path: '/',
         name: 'home',
         component: Home,
+    },,
+    {
+        path: '/login',
+        name: 'login',
+        component: Login,
     },
 ]

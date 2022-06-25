@@ -1,14 +1,17 @@
-<!-- <script>
-export default {
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
-  },
-};
-</script>
+<script setup>
+import  { defineAsyncComponent, defineProps, computed } from "vue";
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  }
+})
+const dynamicComponent = computed(() => {
+  const name = props.name;
 
+  return defineAsyncComponent(() => import(`./svgs/${name}.vue`))
+})
+</script>
 <template>
-  <div v-html="require(`../icons/${name}.svg?raw`)" />
-</template> -->
+    <component :is="dynamicComponent" />
+</template>
