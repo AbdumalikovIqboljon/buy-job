@@ -18,10 +18,10 @@ import InboxIcon from "./svgs/InboxIcon.vue";
       <InboxIcon />
       <span class="ml-2.5">Поддержка</span>
     </router-link>
-    <BaseButton type="warning">
+    <router-link type="warning" :to="{ name: 'login' }">
         <span class="mr-4">Войти</span>
         <UserIcon />
-    </BaseButton>
+    </router-link>
     
 
   </div>

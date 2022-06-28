@@ -247,6 +247,7 @@ onUnmounted(() => {
   border:none;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 2px 5px 0px #ccc;
+  color: #222;
   z-index: 99;
 }
 h2 {

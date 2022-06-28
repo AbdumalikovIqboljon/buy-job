@@ -1,3 +1,17 @@
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  width: {
+    type: String,
+    required: true,
+  },
+  height: {
+    type: String,
+    required: true,
+  },
+})
+</script>
 <template>
   <svg
     width="153"
