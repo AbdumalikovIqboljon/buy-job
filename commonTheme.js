@@ -57,6 +57,7 @@ const commonTheme = {
     yellowish: "#FFCC80",
     darkblue: "#3C4852",
     bordergrey: "#E7E7E7",
+    borderInput: "#DBD5D5",
     serviceColor: "#f8f8f8",
     ticketColor: "#8E8D8D",
     primary: {
