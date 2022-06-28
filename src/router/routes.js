@@ -2,6 +2,7 @@ import Support from "../pages/Support.vue";
 import Home from "../pages/Home.vue";
 import Login from "../pages/Login.vue";
 import Register from "../pages/Register.vue";
+import Orders from "../pages/Orders.vue";
 // import Login from "../pages/Login.vue";
 export const routes = [
     {
@@ -23,5 +24,10 @@ export const routes = [
         path: '/register',
         name: 'register',
         component: Register,
+    },
+    {
+        path: '/orders',
+        name: 'orders',
+        component: Orders,
     },
 ]
