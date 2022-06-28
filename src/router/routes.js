@@ -1,6 +1,7 @@
 import Support from "../pages/Support.vue";
 import Home from "../pages/Home.vue";
 import Login from "../pages/Login.vue";
+import Register from "../pages/Register.vue";
 // import Login from "../pages/Login.vue";
 export const routes = [
     {
@@ -17,5 +18,10 @@ export const routes = [
         path: '/login',
         name: 'login',
         component: Login,
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: Register,
     },
 ]
