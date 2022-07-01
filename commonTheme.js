@@ -83,7 +83,7 @@ const commonTheme = {
     "light-600": "#F2F5FB",
     "slate-300": "#C2C7D3",
     "slate-400": "#444D65",
-    "zinc-200": "#EAEAEA",
+    "zinc-200": "#ECECEC",
     "zinc-300": "#E6E6E6",
     "zinc-500": "#CCCCCC",
     "zinc-600": "#7A7A7A",
