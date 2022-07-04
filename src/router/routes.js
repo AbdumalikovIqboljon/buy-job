@@ -4,6 +4,7 @@ import Login from "@/pages/Login.vue";
 import Register from "@/pages/Register.vue";
 import Orders from "@/pages/Orders.vue";
 import BalanceDetails from "@/pages/BalanceDetails.vue";
+import Settings from "@/pages/Settings.vue";
 // import Login from "@/pages/Login.vue";
 export const routes = [
   {
@@ -36,5 +37,10 @@ export const routes = [
     path: "/balance",
     name: "balance",
     component: BalanceDetails,
+  },
+  {
+    path: "/settings",
+    name: "settings",
+    component: Settings,
   },
 ];

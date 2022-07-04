@@ -104,8 +104,8 @@ export default {
       secondary
         ? {
             'bg-transparent text-white border border-bordergrey border-opacity-40': type === 'info',
-            'bg-white text-secondary border border-secondary':
-              type === 'primary',
+            'bg-white text-success border border-success':
+              type === 'success',
             'bg-transparent text-darkblue border border-yellowish': type === 'warning',
             'bg-white text-error border border-error': type === 'error',
           }
@@ -114,7 +114,7 @@ export default {
             'bg-secondary text-white border-secondary': type === 'primary',
             'bg-yellowish text-darkblue': type === 'warning',
             'bg-error text-white border-primary': type === 'error',
-            'bg-light-500 text-secondary border-error': type === 'tertiary',
+            'bg-success text-white border-success': type === 'success',
           },
     ]"
     v-bind="$attrs"
